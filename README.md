@@ -5,6 +5,7 @@ This project was generated with [Angular](https://github.com/angular) version 4.
 ## project setup
 
 First download repository then open file in terminal and change the file path  to `angular4-tutorial-guide` then do `npm install --save`.
+
 HelpText:- Suppose if you are in download directory then open terminal and paste `cd Download/angular4-tutorial-guide`.
 
 ## server setup
