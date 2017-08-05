@@ -3,7 +3,10 @@
 This project was generated with [Angular](https://github.com/angular) version 4.0.0.
 
 ## project setup
-first download repository then open in terminal by using `cd angular4-tutorial-guide` then do `npm install --save`.
+
+First download repository then open file in terminal and change the file path  to `angular4-tutorial-guide` then do `npm install --save`.
+HelpText:- Suppose if you are in download directory then open terminal and paste `cd Download/angular4-tutorial-guide`.
+
 ## server setup
 
 Run `npm start` to start a project.It Navigate to `http://localhost:3000/`. The app will automatically reload if you change any of the source files.Becuase it use `JIT`(just in time) compiler.
