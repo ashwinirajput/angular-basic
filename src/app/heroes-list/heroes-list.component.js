@@ -9,33 +9,38 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
-var hero_service_1 = require("./services/hero-service");
-var AppComponent = (function () {
-    function AppComponent(heroService) {
+var router_1 = require("@angular/router");
+var hero_service_1 = require("../services/hero-service");
+var HeroesListComponent = (function () {
+    function HeroesListComponent(heroService, router) {
         this.heroService = heroService;
+        this.router = router;
         this.title = 'Tour of Heroes';
     }
-    AppComponent.prototype.ngOnInit = function () {
+    HeroesListComponent.prototype.ngOnInit = function () {
         this.getHeroes();
     };
-    AppComponent.prototype.onSelect = function (hero) {
+    HeroesListComponent.prototype.onSelect = function (hero) {
         this.selectedHero = hero;
     };
-    AppComponent.prototype.getHeroes = function () {
+    HeroesListComponent.prototype.getHeroes = function () {
         var _this = this;
         this.heroService.getHeroes().then(function (data) {
             _this.heroes = data;
         });
     };
-    return AppComponent;
+    HeroesListComponent.prototype.gotoDetail = function () {
+        this.router.navigate(['/dashboard', this.selectedHero.id]);
+    };
+    return HeroesListComponent;
 }());
-AppComponent = __decorate([
+HeroesListComponent = __decorate([
     core_1.Component({
         moduleId: module.id + '',
-        selector: 'my-app',
-        templateUrl: 'app.component.html'
+        selector: 'heroes-list',
+        templateUrl: 'heroes-list.component.html'
     }),
-    __metadata("design:paramtypes", [hero_service_1.HeroService])
-], AppComponent);
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+    __metadata("design:paramtypes", [hero_service_1.HeroService, router_1.Router])
+], HeroesListComponent);
+exports.HeroesListComponent = HeroesListComponent;
+//# sourceMappingURL=heroes-list.component.js.map

@@ -1,0 +1,7 @@
+<div class="grid grid-pad">
+  <a *ngFor="let hero of heroes"  [routerLink]="['/dashboard', hero.id]"  class="col-sm-3">
+    <div class="module hero">
+      <h4>{{hero.name}}</h4>
+    </div>
+  </a>
+</div>
