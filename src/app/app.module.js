@@ -8,14 +8,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var core_1 = require("@angular/core");
 var platform_browser_1 = require("@angular/platform-browser");
 var forms_1 = require("@angular/forms");
-var router_1 = require("@angular/router");
 var app_component_1 = require("./app.component");
-//other module
-var hero_detail_component_1 = require("./hero-detail/hero-detail.component");
 var hero_header_component_1 = require("./hero-header/hero-header.component");
-var hero_dashboard_component_1 = require("./hero-dashboard/hero-dashboard.component");
-var heroes_list_component_1 = require("./heroes-list/heroes-list.component");
-var form_component_1 = require("./shared/form-component/form-component");
+//router
+var app_routes_1 = require("./router/app.routes");
 //services
 var hero_service_1 = require("./services/hero-service");
 var AppModule = (function () {
@@ -28,30 +24,12 @@ AppModule = __decorate([
         imports: [
             platform_browser_1.BrowserModule,
             forms_1.FormsModule,
-            router_1.RouterModule.forRoot([
-                {
-                    path: '',
-                    redirectTo: '/dashboard',
-                    pathMatch: 'full',
-                }, {
-                    path: 'dashboard',
-                    component: hero_dashboard_component_1.HeroDashboardComponent
-                }, {
-                    path: 'heroes',
-                    component: heroes_list_component_1.HeroesListComponent
-                }, {
-                    path: 'dashboard/:id',
-                    component: hero_detail_component_1.HeroDetailComponent
-                }
-            ])
+            app_routes_1.AppRoutesModule
         ],
         declarations: [
             app_component_1.AppComponent,
-            hero_detail_component_1.HeroDetailComponent,
+            app_routes_1.appRoutesComponent,
             hero_header_component_1.HeroHeaderComponent,
-            hero_dashboard_component_1.HeroDashboardComponent,
-            heroes_list_component_1.HeroesListComponent,
-            form_component_1.FormComponent
         ],
         providers: [hero_service_1.HeroService],
         bootstrap: [app_component_1.AppComponent]
