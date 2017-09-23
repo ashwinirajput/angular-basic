@@ -15,6 +15,7 @@ var hero_detail_component_1 = require("./hero-detail/hero-detail.component");
 var hero_header_component_1 = require("./hero-header/hero-header.component");
 var hero_dashboard_component_1 = require("./hero-dashboard/hero-dashboard.component");
 var heroes_list_component_1 = require("./heroes-list/heroes-list.component");
+var form_component_1 = require("./shared/form-component/form-component");
 //services
 var hero_service_1 = require("./services/hero-service");
 var AppModule = (function () {
@@ -49,7 +50,8 @@ AppModule = __decorate([
             hero_detail_component_1.HeroDetailComponent,
             hero_header_component_1.HeroHeaderComponent,
             hero_dashboard_component_1.HeroDashboardComponent,
-            heroes_list_component_1.HeroesListComponent
+            heroes_list_component_1.HeroesListComponent,
+            form_component_1.FormComponent
         ],
         providers: [hero_service_1.HeroService],
         bootstrap: [app_component_1.AppComponent]
