@@ -8,6 +8,7 @@ import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 import { HeroHeaderComponent } from './hero-header/hero-header.component';
 import { HeroDashboardComponent } from './hero-dashboard/hero-dashboard.component';
 import { HeroesListComponent } from './heroes-list/heroes-list.component';
+import { FormComponent } from './shared/form-component/form-component';
 //services
 import { HeroService } from './services/hero-service';
 @NgModule({
@@ -36,7 +37,8 @@ import { HeroService } from './services/hero-service';
     HeroDetailComponent,
     HeroHeaderComponent,
     HeroDashboardComponent,
-    HeroesListComponent
+    HeroesListComponent,
+    FormComponent
   ],
   providers:    [HeroService],
   bootstrap:    [ AppComponent ]
